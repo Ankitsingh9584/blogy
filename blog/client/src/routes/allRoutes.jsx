@@ -14,7 +14,7 @@ return(
         <Route path="user/login" element={<Login/>}/>
         <Route path="user/register" element={<SignUp/>}/>
         <Route path="/" element={<AllBlogs/>}/>
-        <Route path="/singleblog/:id" element={<SingleBlog/>}/>
+        <Route path="/singleblog/:id" element={<PrivateRoutes><SingleBlog/></PrivateRoutes>}/>
         <Route path="/createblog" element={<PrivateRoutes><CreateBlog/></PrivateRoutes>}/>
     </Routes>
     
