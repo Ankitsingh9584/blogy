@@ -37,7 +37,8 @@ export const loginReducer=(state=initialState,action)=>{
             return {
                 ...state,
                 error:true,
-                loading:false
+                loading:false,
+                isAuth:false
             }
         }
         case GOOGLE_AUTH:{

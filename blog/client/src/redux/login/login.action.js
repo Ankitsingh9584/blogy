@@ -19,7 +19,7 @@ if(response.data.message==="ok"){
   axios.defaults.headers.common["authorization"]=`${response.data.token}`;
     dispatch({type:LOGIN_SUCCESS,payload:response.data});
 }
-  else if(response.data.message==="no"){
+ if(response.data.message==="no"){
     
 dispatch({type:LOGIN_ERROR})
   }
