@@ -47,7 +47,7 @@ dispatch(getBlogs())
 function deleteComment1(id){
 
 dispatch(deleteComment(id));
-toast({
+return toast({
   title: 'Comment Deleted Successfully.',
   description: "Try to read more blogs and post comments.",
   status: 'success',
