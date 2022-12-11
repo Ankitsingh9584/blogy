@@ -1,12 +1,14 @@
 import { VStack,Text, Input,  FormControl, FormLabel,FormHelperText, Button,useToast} from "@chakra-ui/react";
 import { useDispatch,useSelector } from "react-redux";
 import { signup } from "../redux/signup/signup.action";
-import { useState } from "react";;
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+;
 
 export  function SignUp(){
 
     const dispatch=useDispatch();
-  
+  const navigate=useNavigate();
     const [userDetails,setUserDetails]=useState({name:"",email:"",password:""});
    
     let store=useSelector((store)=>store);
@@ -37,6 +39,7 @@ if(userDetails.name===""||userDetails.email===""||userDetails.password===""){
             duration: 1000,
             isClosable: true,
           })
+          navigate('/user/login')
     }
     else{
         toast({

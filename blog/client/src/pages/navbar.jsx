@@ -29,7 +29,10 @@ function logOutDispatch(){
 
            <Box>
        
-       { isAuth? <Text fontSize={"25px"} color={"orange"}>Hello {userName}</Text>:<Button  onClick={ ()=>navigate("/user/register")} color={"white"} _hover={{color:"orange"}} fontSize={{base:"17px",lg:"23px"}}  bgColor='blue'>
+       { isAuth? <HStack ><Text fontSize={{base:"19px",lg:"23px"}} color={"white"}>Hello</Text>
+       <Text fontSize={{base:"19px",lg:"23px"}}  color={"orange"}> {userName}</Text>
+       </HStack>:
+       <Button  onClick={ ()=>navigate("/user/register")} color={"white"} _hover={{color:"orange"}} fontSize={{base:"17px",lg:"23px"}}  bgColor='blue'>
         Register</Button>}
   
       </Box>

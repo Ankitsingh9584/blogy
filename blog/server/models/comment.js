@@ -4,7 +4,8 @@ const commentSchema=new Schema({
    comment:String,
    userId:String,
    blogId:String,
-   userName:String
+   userName:String,
+   date:Date
 });
 
 

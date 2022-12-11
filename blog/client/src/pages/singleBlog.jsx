@@ -26,12 +26,21 @@ let oneBlog=data.filter((el)=>el._id===id[1].toString());
  //console.log(oneBlog);
 const {userName,userId}=useSelector((store)=>store.login)
 function callDispatch(){
-
-  dispatch(postComment(comment,id[1],userName,userId))
+  if(comment===""){
+    return toast({
+      title: 'All fields are mandatory.',
+      description: "Please Fill all the fields",
+      status: 'error',
+      duration:3200,
+      isClosable: true, 
+    })
+  }
+  let date=new Date()
+  dispatch(postComment(comment,id[1],userName,userId,date))
 }
 useEffect(()=>{
   dispatch(getComment())
-  dispatch(getBlogs())
+dispatch(getBlogs())
 },[])
 
 // 
@@ -62,7 +71,7 @@ if(get_comment.comment.postComments.success){
           <Box marginTop={7}>
             <HStack justifyContent={"space-between"}>
                <Text color={"gray.600"}>Author:{oneBlog[0]?.author}</Text>
-               <Text color={"gray.600"}> {oneBlog[0]?.date}</Text>
+               <Text color={"gray.600"}> Date:{oneBlog[0]?.date.split("T")[0]}</Text>
             </HStack>
             <Text marginTop={3} mb='8px'>{oneBlog[0]?.blog}</Text>
           </Box>
@@ -94,13 +103,20 @@ if(get_comment.comment.postComments.success){
   <Box>
 <Text marginLeft={"20px"} >Name:{el.userName}</Text>
 </Box>
-<Box >
-{el.userId===userId ? <Button onClick={()=>deleteComment1(el._id)} marginTop={"10px"} colorScheme={"blue"}>Delete</Button>:""}</Box>
+<Box>
+  Date:{el.date.split('T')[0]}
+</Box>
+
 </HStack>
 
-  
+  <HStack w={"97%"}  justifyContent={"space-between"}>
+  <Box marginLeft={"20px"} >Comment:{el.comment}</Box>
+  <Box >
+{el.userId===userId ? <Button onClick={()=>deleteComment1(el._id)} marginBottom={"10px"} marginRight={"10px"} colorScheme={"blue"}>Delete
+</Button>:""}</Box>
+  </HStack>
 
-        <Box margin={"auto"}>Comment:{el.comment}</Box>
+       
        
         </VStack>
      

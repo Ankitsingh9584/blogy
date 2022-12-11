@@ -8,9 +8,9 @@ import axios from "axios";
 
 
 
-export const postComment=(comment,blog_id,userName,userId)=>async(dispatch)=>{
+export const postComment=(comment,blog_id,userName,userId,date)=>async(dispatch)=>{
 //console.log("cooment.action.js",comment,blog_id,userName)
-const commentDetails={comment:comment,blogId:blog_id,userName:userName,userId:userId}
+const commentDetails={comment:comment,blogId:blog_id,userName:userName,userId:userId,date:date}
 dispatch({type:POST_COMMENT_LOADING});
 try{
 let response=await axios.post("http://localhost:8080/postcomment",commentDetails);
