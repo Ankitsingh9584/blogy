@@ -9,11 +9,12 @@ const connect=require("./config/db");
 const userRegister=require("./routes/user")
 const blog=require("./routes/blog");
 const googleAuth=require("./routes/googleAuth")
-
+const comment=require("./routes/comment")
 
 app.use("/user",userRegister)
 app.use("/blog",blog)
-app.use("/auth",googleAuth)
+app.use("/auth",googleAuth);
+app.use("/",comment)
 app.listen(8080,async()=>{
 await connect();
 })

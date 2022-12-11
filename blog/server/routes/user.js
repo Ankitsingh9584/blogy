@@ -32,7 +32,7 @@ app.post("/login",async(req,res)=>{
    if(weGetUser){
   const token=  jwt.sign({id:weGetUser._id,email:weGetUser.email,name:weGetUser.name},"SECRET1234",{expiresIn:"7 days"});
    console.log(token)
-  res.send({message:"ok",token:token,userName:weGetUser.name})
+  res.send({message:"ok",token:token,userName:weGetUser.name,userId:weGetUser._id})
    
 
 }

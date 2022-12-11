@@ -7,11 +7,11 @@ import { useNavigate } from "react-router-dom";
 export const CreateBlog=()=>{
     const navigate=useNavigate();
     const toast=useToast();
-   const authorName=useSelector((store)=>store.login.userName);
-   const token=useSelector((store)=>store.login.token);
+    const authorName=useSelector((store)=>store.login.userName);
+    const token=useSelector((store)=>store.login.token);
     const [blogDescription,setBlogDescription]=useState({blogCategory:"",blog:"",
     image:"https://www.doz.com/wp-content/uploads/2013/08/blog.jpg",date:new Date(),author:authorName})
-const dispatch=useDispatch()
+    const dispatch=useDispatch()
     function sendBlog(){
         if(blogDescription.blogCategory===""||blogDescription.blog===""){
 return toast({
