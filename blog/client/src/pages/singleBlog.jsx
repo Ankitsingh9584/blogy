@@ -46,7 +46,14 @@ dispatch(getBlogs())
 // 
 function deleteComment1(id){
 
-dispatch(deleteComment(id))
+dispatch(deleteComment(id));
+toast({
+  title: 'Comment Deleted Successfully.',
+  description: "Try to read more blogs and post comments.",
+  status: 'success',
+  duration: 3200,
+  isClosable: true,
+})
 }
 const get_comment=useSelector((store)=>store);
 console.log(get_comment)
@@ -58,6 +65,9 @@ if(get_comment.comment.postComments.success){
     duration: 3200,
     isClosable: true,
   })
+
+
+      //   important steps to make false
   get_comment.comment.postComments.success=false;
 }
 

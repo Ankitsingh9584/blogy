@@ -17,11 +17,10 @@ function callAction(){
     // console.log("hello")
     // console.log(userDetails);
   
-    console.log(store)
-dispatch(signup(userDetails));
+
 
 if(userDetails.name===""||userDetails.email===""||userDetails.password===""){
-    toast({
+  return  toast({
         title: 'All fields are mandatory.',
         description: "Please fill all the details.",
         status: 'warning',
@@ -29,32 +28,39 @@ if(userDetails.name===""||userDetails.email===""||userDetails.password===""){
         isClosable: true,
       })
 }
+else{
+    console.log(store)
+    dispatch(signup(userDetails));
+}
 
-
-    else if(store.signup.register&&store.signup.message.message==="ok"){
-        toast({
-            title: 'Account created.',
-            description: "We've created your account for you.",
-            status: 'success',
-            duration: 1000,
-            isClosable: true,
-          })
-          navigate('/user/login')
-    }
-    else{
-        toast({
-            title: 'user already exists.',
-            description: "Please try to register with different email or try to login",
-            status: 'error',
-            duration:1000,
-            isClosable: true,
-          })
-    } 
+   
 
 
 
 }
-
+if(store.signup.register ){
+    toast({
+        title: 'Account created.',
+        description: "We've created your account for you.",
+        status: 'success',
+        duration: 1000,
+        isClosable: true,
+      });
+    //   important steps to make false
+      store.signup.register=false;
+    return  navigate('/user/login')
+}
+if(store.signup.error){
+    toast({
+        title: 'user already exists.',
+        description: "Please try to register with different email or try to login",
+        status: 'error',
+        duration:1000,
+        isClosable: true,
+      });
+          //   important steps to make false
+      store.signup.error=false
+} 
 
     
    

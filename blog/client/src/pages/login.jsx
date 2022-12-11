@@ -18,10 +18,10 @@ function callDispatch(){
    
 }
 
-function googleAuth1(){
-    console.log('hello google')
-dispatch(googleAuth());
-}
+// function googleAuth1(){
+//     console.log('hello google')
+// dispatch(googleAuth());
+// }
 
 
 if(store.login.error){
@@ -34,6 +34,9 @@ if(store.login.error){
      })
     // this time error is true so page will redirect infinite time hangs system so after 1st login credentials 
     //  wrong error is true error toast displayed then we do store.login.error=false; so re renderning stops.
+
+
+           //   important steps to make false
      store.login.error=false;
     return <Navigate to="/user/login"/>
     }
@@ -62,7 +65,7 @@ if(store.login.isAuth){
   <Input onChange={(e)=>setUserDetails({...userDetails,password:e.target.value})} type='password' placeholder="Enter Your password Here"/>
   <Button onClick={callDispatch} my={5} colorScheme='blue'>Login</Button>
 </FormControl>
-<Button colorScheme='white' color={"black"} _hover={{bgColor:"orange"}} onClick={()=>googleAuth1()}>
+<Button colorScheme='white' color={"black"} _hover={{bgColor:"orange"}} >
 <FcGoogle size={"32px"}/>   Login with Google 
   </Button>
 </VStack>

@@ -12,6 +12,9 @@ try{
 let response=await axios.post("http://localhost:8080/user/register",creds);
 console.log(response.data)
       dispatch({type:SIGNUP_SUCCESS,payload:response.data});
+      if(response.data.message==="userexist"){
+            dispatch({type:SIGNUP_ERROR})
+      }
 }
 catch{
 dispatch({type:SIGNUP_ERROR})

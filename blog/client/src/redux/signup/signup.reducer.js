@@ -3,7 +3,7 @@ const initialState={
 register:false,
 error:false,
 loading:false,
-message:"",
+
 
 }
 
@@ -14,7 +14,7 @@ export const signupReducer=(state=initialState,action)=>{
      return {
         ...state,
           loading:true,
-      
+      error:false,
           register:false
      }
 
@@ -25,14 +25,16 @@ export const signupReducer=(state=initialState,action)=>{
                 register:true,
                 loading:false,
                 error:false,
-                message:action.payload
+             
+
+                
             }
         }
         case SIGNUP_ERROR:{
             return {
                 ...state,
                 error:true,
-           
+          loading:false,
                  register:false
             }
         }

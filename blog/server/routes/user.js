@@ -8,7 +8,7 @@ app.post("/register",async(req,res)=>{
     try{
         let existUser=await userModel.findOne({email:userDetails.email});
         if(existUser){
-            res.send("user with this email already registered");
+            res.send({message:"userexist"});
         }
         else{
             let data=await userModel.create(userDetails);
