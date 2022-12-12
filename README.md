@@ -40,7 +40,7 @@
 
 <br />
 
-It’s Individual project where i have used MERN stack to make the blog website with our creativity along with frontend and backend integration
+It’s Individual project where i have used MERN stack to make the blog website with my creativity along with frontend and backend integration
 its Fully Responsive blog web application that allows you to create your own blog and read others blog online.
 
 
