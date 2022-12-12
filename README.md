@@ -43,7 +43,7 @@
 It’s Group individual where we've used MERN stack to make the blog website with our creativity along with frontend and backend integration
 its Fully Responsive blog web application that allows you to create your own blog and read others blog online.
 
-<img src="https://i.ibb.co/K7qkkS3/final-637365106051e10025683e17-519389.gif" width="800px" />
+
 
 
 <br />
