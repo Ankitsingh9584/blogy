@@ -68,23 +68,17 @@ its Fully Responsive blog web application that allows you to create your own blo
 
 <table>
   <tr>
-    <td><img maxW="50%" src="https://ibb.co/C7Qvt4k"  alt="home" /></td>
-    <td><img maxW="50%" src="https://ibb.co/0FqGKtJ"  alt="coupons" /></td>
+    <td><img maxW="50%" src="https://i.ibb.co/Hx7HCdg/Screenshot-4.png"  alt="home" /></td>
+    <td><img maxW="50%" src="https://i.ibb.co/J7H2d8f/Screenshot-9.png"  alt="coupons" /></td>
   </tr>
   <tr>
-   <td><img src="https://ibb.co/0QrfqTn"  alt="allProducts" /></td>
-    <td><img src="https://ibb.co/Khskx8Q"  alt="men" /></td>
+   <td><img src="https://i.ibb.co/b7Xr1T6/Screenshot-5.png"  alt="allProducts" /></td>
+    <td><img src="https://i.ibb.co/9g4LHdf/Screenshot-6.png"  alt="men" /></td>
   </tr>
   <tr>
-    <td><img src="https://ibb.co/nMGNVqc" alt="allProducts" /></td>
-    <td><img src="https://ibb.co/938tvDX"  alt="men" /></td>
+    <td><img src="https://i.ibb.co/pj7Bs6z/Screenshot-7.png" alt="allProducts" /></td>
+    <td><img src="https://i.ibb.co/PzmQYLp/Screenshot-8.png"  alt="men" /></td>
   </tr>
-  <tr>
-    <td><img src="https://ibb.co/C7Qvt4k"  alt="women" /></td>
-  
-  </tr>
-  
-
 </table>
 
 <br />
