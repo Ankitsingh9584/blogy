@@ -49,10 +49,12 @@ its Fully Responsive blog web application that allows you to create your own blo
 
 ## Screens 
 - Homepage / Landing Page
-- all blogs 
-- single blog
+- All blogs 
+- Single blog
 - Create blog 
+- Comment on blogs
 - Login / Logout Page
+- Forgot password
 - Register Page
 
 
