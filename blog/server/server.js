@@ -10,11 +10,12 @@ const userRegister=require("./routes/user")
 const blog=require("./routes/blog");
 const googleAuth=require("./routes/googleAuth")
 const comment=require("./routes/comment")
-
+const forgotPass=require("./routes/forgotpass");
 app.use("/user",userRegister)
 app.use("/blog",blog)
 app.use("/auth",googleAuth);
 app.use("/",comment)
+app.use("/",forgotPass)
 app.listen(8080,async()=>{
 await connect();
 })

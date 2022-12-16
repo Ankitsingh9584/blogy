@@ -6,6 +6,7 @@ import { useNavigate,Navigate} from "react-router-dom";
 import {FcGoogle} from "react-icons/fc";
 
 export  function Login(){
+
     const toast=useToast()
 const dispatch=useDispatch();
 const [userDetails,setUserDetails]=useState({email:"",password:""});
@@ -16,6 +17,9 @@ function callDispatch(){
    
     dispatch(login(userDetails));
    
+}
+function forgotPass(){
+    navigate("/forgotpass")
 }
 
 // function googleAuth1(){
@@ -65,8 +69,8 @@ if(store.login.isAuth){
   <Input onChange={(e)=>setUserDetails({...userDetails,password:e.target.value})} type='password' placeholder="Enter Your password Here"/>
   <Button onClick={callDispatch} my={5} colorScheme='blue'>Login</Button>
 </FormControl>
-<Button colorScheme='white' color={"black"} _hover={{bgColor:"orange"}} >
-<FcGoogle size={"32px"}/>   Login with Google 
+<Button onClick={forgotPass} colorScheme='white' color={"black"} _hover={{bgColor:"orange"}} >
+Forgot your password
   </Button>
 </VStack>
 
