@@ -74,7 +74,7 @@ its Fully Responsive blog web application that allows you to create your own blo
   </tr>
   <tr>
    <td><img src="https://i.ibb.co/b7Xr1T6/Screenshot-5.png"  alt="allProducts" /></td>
-    <td><img src="https://i.ibb.co/9g4LHdf/Screenshot-6.png"  alt="men" /></td>
+    <td><img src="https://i.ibb.co/2ng6bp3/Screenshot-10.png"   alt="men" /></td>
   </tr>
   <tr>
     <td><img src="https://i.ibb.co/pj7Bs6z/Screenshot-7.png" alt="allProducts" /></td>
