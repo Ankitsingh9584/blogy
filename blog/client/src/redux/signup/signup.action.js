@@ -9,7 +9,7 @@ export const signup=(creds)=>async(dispatch)=>{
   
 dispatch({type:SIGNUP_LOADING});
 try{
-let response=await axios.post("http://localhost:8080/user/register",creds);
+let response=await axios.post("https://blogbackend-1pps.onrender.com/register",creds);
 console.log(response.data)
       dispatch({type:SIGNUP_SUCCESS,payload:response.data});
       if(response.data.message==="userexist"){

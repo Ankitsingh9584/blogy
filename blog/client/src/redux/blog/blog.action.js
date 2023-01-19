@@ -11,7 +11,7 @@ dispatch({type:POST_BLOG_LOADING});
 try{
      
     axios.defaults.headers.common["authorization"]=`${token}`;
-let response=await axios.post("http://localhost:8080/blog/createblog",creds
+let response=await axios.post("https://blogbackend-1pps.onrender.com/blog/createblog",creds
 );
 
 
@@ -45,7 +45,7 @@ catch(e){
     
         dispatch({type:GET_BLOG_LOADING});
         try{
-            let response=await axios.get("http://localhost:8080/blog/getblogs");
+            let response=await axios.get("https://blogbackend-1pps.onrender.com/blog/getblogs");
             console.log(response.data)
 
 dispatch({type:GET_BLOG_SUCCESS,payload:response.data})

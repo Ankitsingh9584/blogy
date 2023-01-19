@@ -13,7 +13,7 @@ export const postComment=(comment,blog_id,userName,userId,date)=>async(dispatch)
 const commentDetails={comment:comment,blogId:blog_id,userName:userName,userId:userId,date:date}
 dispatch({type:POST_COMMENT_LOADING});
 try{
-let response=await axios.post("http://localhost:8080/postcomment",commentDetails);
+let response=await axios.post("https://blogbackend-1pps.onrender.com/postcomment",commentDetails);
 console.log(response.data);
 dispatch({type:POST_COMMENT_SUCCESS,payload:response.data.data});
 
@@ -29,7 +29,7 @@ dispatch({type:POST_COMMENT_ERROR})
 export const getComment=(creds)=>async(dispatch)=>{
     dispatch({type:GET_COMMENT_LOADING});
     try{
-        let response=await axios.post("http://localhost:8080/getcomment");
+        let response=await axios.post("https://blogbackend-1pps.onrender.com/getcomment");
         console.log(response.data);
         dispatch({type:GET_COMMENT_SUCCESS,payload:response.data.data})
     }
@@ -44,7 +44,7 @@ export const deleteComment=(creds)=>async(dispatch)=>{
     console.log("action.js.delet",creds)
     dispatch({type:DELETE_COMMENT_LOADING});
     try{
-        let response=await axios.post("http://localhost:8080/deletecomment",{creds});
+        let response=await axios.post("https://blogbackend-1pps.onrender.com/deletecomment",{creds});
         console.log(response.data);
         dispatch({type:DELETE_COMMENT_SUCCESS,payload:response.data.data})
     }

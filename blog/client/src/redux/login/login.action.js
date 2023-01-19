@@ -10,7 +10,7 @@ export const login=(creds)=>async(dispatch)=>{
     // console.log(creds)
 dispatch({type:LOGIN_LOADING});
 try{
-let response=await axios.post("http://localhost:8080/user/login",creds,{
+let response=await axios.post("https://blogbackend-1pps.onrender.com/user/login",creds,{
 
 });
 console.log(response.data)
@@ -35,7 +35,7 @@ export const googleAuth=()=>async(dispatch)=>{
 
   try{
     console.log("googleAuth")
-   let response= await axios.get("http://localhost:8080/auth/google");
+   let response= await axios.get("https://blogbackend-1pps.onrender.com/auth/google");
    console.log(response.data)
     dispatch({type:GOOGLE_AUTH})
   }

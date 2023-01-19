@@ -8,7 +8,7 @@ import axios from "axios";
 export const sendDetails=(creds)=>async(dispatch)=>{
     console.log("forgot",creds)
 try{
-let response=await axios.post("http://localhost:8080/forgotpass",creds)
+let response=await axios.post("https://blogbackend-1pps.onrender.com/forgotpass",creds)
 console.log("forgot email response",response.data);
 if(response.data.msg==="ok"){
     dispatch({type:FORGOTPASS_SUCCESS,payload:{otp:response.data.otp,email:response.data.email}})
@@ -30,7 +30,7 @@ console.log("forgotpass",e.message)
 export const setForgotPass=(creds)=>async(dispatch)=>{
     console.log("forgot",creds)
 try{
-let response=await axios.post("http://localhost:8080/setforgotpass",creds)
+let response=await axios.post("https://blogbackend-1pps.onrender.com/setforgotpass",creds)
 console.log("forgot email response",response.data);
 if(response.data.msg==="ok"){
     dispatch({type:SET_FORGOTPASS_SUCCESS})
