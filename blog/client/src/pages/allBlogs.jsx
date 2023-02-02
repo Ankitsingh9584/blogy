@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 export function AllBlogs(){
-    const [data,setData]=useState([]);
+  //  const [data,setData]=useState([]);
     const dispatch=useDispatch();
   
    let blogs= useSelector((store)=>{
@@ -19,13 +19,15 @@ export function AllBlogs(){
     useEffect(()=>{
         dispatch(getBlogs())
     },[]);
-    useEffect(()=>{
-        
-            setData(blogs);
+    // useEffect(()=>{
+    //     function call(){
+    //         setData(blogs);
+    //     }
             
+    //      call(); 
         
        
-     },[]);
+    //  },[]);
      
 const navigate=useNavigate();
 
@@ -34,17 +36,17 @@ const gotoSingleblog=(image,date,blog,category,id)=>{
 
 navigate(`/singleblog/:${id}`)
 }
-function callFilter(value){
-    console.log(value);
-    if(value==="all"){
-        return setData(blogs)
-    }
-    else if(value==="music"){
-        let data1=blogs.filter((el)=>el.blogCategory.toLowerCase()===value);
-        console.log(data1)
-        return setData(data1)
-    }
-}
+// function callFilter(value){
+//     console.log(value);
+//     if(value==="all"){
+//         return setData(blogs)
+//     }
+//     else if(value==="music"){
+//         let data1=blogs.filter((el)=>el.blogCategory.toLowerCase()===value);
+//         console.log(data1)
+//         return setData(data1)
+//     }
+// }
 
 return(
 <>
@@ -53,7 +55,7 @@ return(
 </Box>
 <HStack align={"start"}>
 
-<Box marginLeft={"2%"} height={"200px"} marginTop={"15px"} border={"1px solid gray"} paddingLeft={'5px'} paddingRight={"5px"}>
+{/* <Box marginLeft={"2%"} height={"200px"} marginTop={"15px"} border={"1px solid gray"} paddingLeft={'5px'} paddingRight={"5px"}>
 <Text align={"start"} fontSize={"25px"} color={"#0000FF"} fontWeight={"bold"}>Filter By Category</Text>
 <Select  fontWeight={"bold"} onChange={(e)=>callFilter(e.target.value)}  placeholder='Select option' my={"2vh"}>
   <option value='all'>All</option>
@@ -61,10 +63,10 @@ return(
   <option value='movie'>Movie</option>
   <option value='cricket'>Cricket</option>
 </Select>
-</Box>
+</Box> */}
 
 <SimpleGrid margin={"auto"}  w={"80%"} columns={{base:1,md:2,lg:3}}>
-    {data?.map((el)=>{
+    {blogs?.map((el)=>{
         return(
             <>
             <Box margin={"auto"} marginTop={"20px"} marginLeft={{base:"auto",md:"20px"}}>
