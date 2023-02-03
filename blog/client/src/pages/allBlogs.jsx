@@ -63,7 +63,8 @@ return(
 </Box>
 <HStack align={"start"}>
 
-<Box marginLeft={"2%"} height={"200px"} marginTop={"15px"} border={"1px solid gray"} paddingLeft={'5px'} paddingRight={"5px"}>
+<Box  marginLeft={"2%"}
+ height={"200px"} marginTop={"15px"}  paddingLeft={'5px'} paddingRight={"5px"}>
 <Text align={"start"} fontSize={"25px"} color={"#0000FF"} fontWeight={"bold"}>Filter By Category</Text>
 <Select  fontWeight={"bold"} onChange={(e)=>callFilter(e.target.value)}  placeholder='Select option' my={"2vh"}>
   <option value='all'>All</option>
